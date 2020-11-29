@@ -10,6 +10,7 @@ try:
     import pyfiglet
 except:
     os.system("pip3 install pyfiglet")
+    print("Rerun the tool again")
 def help():
     print(Fore.RED + pyfiglet.figlet_format('STCCheck'))
     print("Example:\n\tpython3 stc.py <websitelist>")
