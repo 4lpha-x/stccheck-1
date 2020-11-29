@@ -1,3 +1,4 @@
+import threading
 import urllib3
 import os
 import sys
@@ -20,18 +21,14 @@ list=sys.argv[1]
 try:
 	import requests
 except:
-	import os
 	os.system('pip3 install requests')
 	os.system('clear')
-import threading
-import socket
 fname = list
 http = urllib3.PoolManager()
 try:
 	f=open(fname)
 except:
 	import os
-	os.system('clear')
 	print("[+] File Not Found [+]")
 	exit()
 f = open(fname)
@@ -40,17 +37,17 @@ def full(i):
 	try:
 		resp=requests.get(i)
 		if resp.status_code==200:
-			print(f'{i} 200 OK')
+			print(f'{Fore.GREEN}{i} [ 200 OK ]')
 		elif resp.status_code==301:
-			print(f'{i} Redirecting 301')
+			print(f'{Fore.BLUE}{i} [ 301 Moved temperory ]')
 		elif resp.status_code==404:
-			print(f'{i} 404 Not Found')
+			print(f'{Fore.RED}{i} [ 404 Not Found ]')
 		elif resp.status_code==403:
-			print(f"{i} 403 Forbidden")
+			print(f"{Fore.YELLOW}{i} [ 403 Forbidden ] ")
 		elif resp.status_code==400:
-			print(f'{i} 400 Bad Request')
+			print(f'{Fore.LIGHTBLACK_EX}{i} [ 400 Bad Request ] ')
 		else:
-			print(f"{i} Status : {resp.status_code}")
+			print(f"{Fore.RED}{i} Status : {resp.status_code}")
 	except requests.ConnectionError:
 		pass
 for i in f:
