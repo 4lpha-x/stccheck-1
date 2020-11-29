@@ -27,13 +27,6 @@ def full(i):
 		resp=requests.get(i)
 		if resp.status_code==200:
 			print(f'\033[1;33;40m{i}  200 OK')
-			j=i
-			j = j.replace('https://','')
-			j=j.replace('http://','')
-			cmd=f"nmap -Pn {j}"
-			import os
-			os.system(cmd)
-			#print(j)
 		elif resp.status_code==301:
 			print(f'\033[1;32;40m;;{i} Redirected 301')
 		elif resp.status_code==404:
