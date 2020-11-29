@@ -2,6 +2,10 @@ import urllib3
 import os
 import sys
 try:
+	from colorama import Fore
+except:
+	os.system("pip3 install colorama")
+try:
     import pyfiglet
 except:
     os.system("pip3 install pyfiglet")
