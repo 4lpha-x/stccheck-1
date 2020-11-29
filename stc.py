@@ -10,7 +10,7 @@ try:
 except:
     os.system("pip3 install pyfiglet")
 def help():
-    print(pyfiglet.figlet_format('STCCheck'))
+    print(Fore.RED + pyfiglet.figlet_format('STCCheck'))
     sys.exit()
 try:
 	list = sys.argv[1]
@@ -32,7 +32,7 @@ try:
 except:
 	import os
 	os.system('clear')
-	print("\033[1;34;40m[+] File Not Found [+]")
+	print("[+] File Not Found [+]")
 	exit()
 f = open(fname)
 def full(i):
