@@ -12,6 +12,7 @@ except:
     os.system("pip3 install pyfiglet")
 def help():
     print(Fore.RED + pyfiglet.figlet_format('STCCheck'))
+	print("Example:\n\tpython3 stc.py <websitelist>")
     sys.exit()
 try:
 	list = sys.argv[1]
