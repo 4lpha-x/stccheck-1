@@ -42,7 +42,7 @@ def full(i):
 		if resp.status_code==200:
 			print(f'{Fore.GREEN}{i} [ 200 OK ]')
 		elif resp.status_code==301:
-			print(f'{Fore.BLUE}{i} [ 301 Moved temperory ]')
+			print(f'{Fore.BLUE}{i} [ 301 Moved temporarily ]')
 		elif resp.status_code==404:
 			print(f'{Fore.RED}{i} [ 404 Not Found ]')
 		elif resp.status_code==403:
