@@ -7,4 +7,4 @@ cd stccheck
 python3 stc.py <websitelist>
 ```
 
-### Its fast even in low internet speed!
+### Its fast even in low internet speed!!
